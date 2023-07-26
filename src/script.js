@@ -1,6 +1,6 @@
 // Handles showing the right panel when a button is clicked
 function showPanel(panelId) {
-  let panels = document.getElementsByClassName("content-panel");
+  const panels = document.getElementsByClassName("content-panel");
   for (let i = 0; i < panels.length; i++) {
     panels[i].style.display = "none";
   }
@@ -8,7 +8,7 @@ function showPanel(panelId) {
 }
 
 // Set up button listeners
-document.getElementById("home-button").addEventListener("click", function () {
+document.getElementById("profile-button").addEventListener("click", function () {
   showPanel("profile");
 });
 
@@ -31,18 +31,18 @@ document
   });
 
 document.getElementById("tweet-button").addEventListener("click", function () {
-  let tweetText = document.getElementById("tweet-text").value;
-  let tweetsContainer = document.getElementById("tweets-container");
+  const tweetText = document.getElementById("tweet-text").value;
+  const tweetsContainer = document.getElementById("tweets-container");
 
   if (tweetText.length > 0) {
-    let newTweet = document.createElement("div");
+    const newTweet = document.createElement("div");
     newTweet.className = "tweet";
 
-    let p = document.createElement("p");
+    const p = document.createElement("p");
     p.textContent = tweetText;
 
-    let time = document.createElement("time");
-    let now = new Date();
+    const time = document.createElement("time");
+    const now = new Date();
     time.textContent = now.toLocaleString();
 
     newTweet.appendChild(p);
