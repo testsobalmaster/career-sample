@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Sample Twitter-like Site</title>
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="left-sidebar">
+      <button id="home-button">Home</button>
+      <button id="explore-button">Explore</button>
+      <button id="notifications-button">Notifications</button>
+      <button id="messages-button">Messages</button>
+    </div>
+    <div id="content">
+      <div id="tweet-feed" class="content-panel">
+        <div class="tweet-input">
+          <textarea id="tweet-text"></textarea>
+          <button id="tweet-button">Tweet</button>
+        </div>
+        <div id="tweets-container"></div>
+      </div>
+      <div id="profile" class="content-panel" style="display: none;">
+        <h2>Your Profile</h2>
+        <p>Name: Sample User</p>
+        <p>Location: Tokyo, Japan</p>
+        <p>About: Just a sample user for a sample Twitter-like site.</p>
+      </div>
+    </div>
+    <div class="right-sidebar">
+      <h2>Trends for you</h2>
+      <!-- Trends would go here -->
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
