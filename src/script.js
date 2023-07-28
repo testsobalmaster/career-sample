@@ -7,50 +7,50 @@ function showPanel(panelId) {
   document.getElementById(panelId).style.display = "block";
 }
 
-// Set up button listeners
-document.getElementById("profile-button").addEventListener("click", function () {
+document.getElementById("profile-button").addEventListener("click", () => {
   showPanel("profile");
 });
 
 document
   .getElementById("explore-button")
-  .addEventListener("click", function () {
+  .addEventListener("click", () => {
     showPanel("tweet-feed");
   });
 
 document
   .getElementById("notifications-button")
-  .addEventListener("click", function () {
+  .addEventListener("click", () => {
     showPanel("tweet-feed");
   });
 
 document
   .getElementById("messages-button")
-  .addEventListener("click", function () {
+  .addEventListener("click", () => {
     showPanel("tweet-feed");
   });
 
-document.getElementById("tweet-button").addEventListener("click", function () {
+document.getElementById("tweet-button").addEventListener("click", () => {
   const tweetText = document.getElementById("tweet-text").value;
   const tweetsContainer = document.getElementById("tweets-container");
 
-  if (tweetText.length > 0) {
-    const newTweet = document.createElement("div");
-    newTweet.className = "tweet";
-
-    const p = document.createElement("p");
-    p.textContent = tweetText;
-
-    const time = document.createElement("time");
-    const now = new Date();
-    time.textContent = now.toLocaleString();
-
-    newTweet.appendChild(p);
-    newTweet.appendChild(time);
-
-    tweetsContainer.prepend(newTweet);
-    document.getElementById("tweet-text").value = "";
-  } else {
+  if (tweetText.length == 0) {
     alert("Please enter a tweet.");
+    return;
   }
+
+  const newTweet = document.createElement("div");
+  newTweet.className = "tweet";
+
+  const p = document.createElement("p");
+  p.textContent = tweetText;
+
+  const time = document.createElement("time");
+  const now = new Date();
+  time.textContent = now.toLocaleString();
+
+  newTweet.appendChild(p);
+  newTweet.appendChild(time);
+
+  tweetsContainer.prepend(newTweet);
+  document.getElementById("tweet-text").value = "";
 });
