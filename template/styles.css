@@ -57,16 +57,6 @@ button:hover {
   border: none;
   padding: 5px 10px;
   margin-top: 5px;
-  cursor: pointer;
-}
-
-#tweet-button:hover {
-  background-color: #0d95e8;
-}
-
-#tweets-container {
-  border-top: 1px solid #ccc;
-  padding-top: 10px;
 }
 
 .tweet {
