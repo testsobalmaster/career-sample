@@ -12,6 +12,12 @@ document.getElementById("profile-button").addEventListener("click", () => {
 });
 
 document
+  .getElementById("home-button")
+  .addEventListener("click", () => {
+    showPanel("tweet-feed");
+  });
+
+document
   .getElementById("explore-button")
   .addEventListener("click", () => {
     showPanel("tweet-feed");

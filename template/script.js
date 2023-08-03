@@ -8,6 +8,12 @@ function showPanel(panelId) {
 }
 
 document
+  .getElementById("home-button")
+  .addEventListener("click", () => {
+    showPanel("tweet-feed");
+  });
+
+document
   .getElementById("explore-button")
   .addEventListener("click", () => {
     showPanel("tweet-feed");
