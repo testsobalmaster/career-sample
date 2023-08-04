@@ -1,0 +1,12 @@
+@startuml SampleTwitter
+autonumber
+actor User
+participant UIManager
+
+User -> UIManager: Access webpage
+UIManager -> UIManager: renderHome() or renderTweetFeed()
+User -> UIManager: Enter text and click 'Tweet' button
+UIManager -> UIManager: addTweet(content)
+User -> UIManager: Click navigation bar button
+UIManager -> UIManager: renderHome() or renderTweetFeed()
+@enduml

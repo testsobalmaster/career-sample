@@ -7,6 +7,10 @@ function showPanel(panelId) {
   document.getElementById(panelId).style.display = "block";
 }
 
+document.getElementById("profile-button").addEventListener("click", () => {
+  showPanel("profile");
+});
+
 document
   .getElementById("home-button")
   .addEventListener("click", () => {

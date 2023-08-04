@@ -1,0 +1,21 @@
+@startuml SampleTwitter
+class Tweet {
+  - content: String
+  - timestamp: Date
+}
+
+class User {
+  - name: String
+  - location: String
+  - bio: String
+}
+
+class UIManager {
+  + renderHome(): void
+  + renderTweetFeed(): void
+  + addTweet(content: String): void
+}
+
+User "1" -- "0..*" Tweet
+User "1" -- "1" UIManager
+@enduml
