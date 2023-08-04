@@ -2,7 +2,8 @@
 <html>
 
 <head>
-  <title>タイトル</title>
+  <title>Sample Twitter</title>
+  <link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
 
 <body>
@@ -12,6 +13,7 @@
       <button id="explore-button">Explore</button>
       <button id="notifications-button">Notifications</button>
       <button id="messages-button">Messages</button>
+      <button id="profile-button">Profile</button>
     </div>
     <div id="content">
       <div id="tweet-feed" class="content-panel">
@@ -22,12 +24,18 @@
         <div id="tweets-container"></div>
       </div>
       <div id="profile" class="content-panel" style="display: none;">
+        <h2>Your Profile</h2>
+        <p>Name: キノコ</p>
+        <img src="./icon.png" alt="" id="icon" />
+        <p>Location: Tokyo , Japan</p>
+        <p>About: Just</p>
       </div>
     </div>
     <div class="right-sidebar">
       <h2>Trends for you</h2>
       <!-- Trends would go here -->
     </div>
+    <script src="script.js"></script>
   </div>
 </body>
 
